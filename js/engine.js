@@ -19,11 +19,12 @@ var Engine = (function(global) {
      * create the canvas element, grab the 2D context for that canvas
      * set the canvas elements height/width and add it to the DOM.
      */
+
     var doc = global.document,
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
+        lastTime = 10;
 
     canvas.width = 505;
     canvas.height = 606;
@@ -145,6 +146,14 @@ var Engine = (function(global) {
      * on your enemy and player entities within app.js
      */
     function renderEntities() {
+
+        /*
+         * Draw any tombstones
+         */
+        allTombstones.forEach(function(tombstone) {
+            tombstone.render();
+        });
+
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
@@ -152,7 +161,15 @@ var Engine = (function(global) {
             enemy.render();
         });
 
-        player.render();
+        /*
+         * Draw the player
+         */
+        if (!gameOver) {
+            player.render();
+        } else {
+            reset();
+        }
+
     }
 
     /* This function does nothing but it could have been a good place to
@@ -160,7 +177,9 @@ var Engine = (function(global) {
      * those sorts of things. It's only called once by the init() method.
      */
     function reset() {
-        // noop
+        if (gameOver) {
+            gameOverMenu();
+        }
     }
 
     /* Go ahead and load all of the images we know we're going to need to
@@ -172,7 +191,9 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/Tombstone.png',
+        'images/Heart.png'
     ]);
     Resources.onReady(init);
 

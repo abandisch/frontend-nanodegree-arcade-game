@@ -88,6 +88,7 @@
                !resourceCache[k]) {
                 ready = false;
             }
+
         }
         return ready;
     }
