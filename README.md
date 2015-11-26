@@ -1,15 +1,15 @@
-Frontend Nanodegree Arcade Game - Frogger
-=========================================
-
-### How to Start Game
-
-1. Open 'index.html' in your favourite browser.
+Frontend Nanodegree Arcade Game
+===============================
 
 ### Game objective
 
 The aim of the game is to get as many points as possible, by moving your hero across the road over to the water, while trying not to let the enemy bugs hit you.
 
 Your hero starts with three lives, once you are hit by an enemy three times the game is over.
+
+### How to Start Game
+
+1. Open 'index.html' in your favourite browser.
 
 ### How to Play
 
