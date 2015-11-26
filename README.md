@@ -15,7 +15,7 @@ Your hero starts with three lives, once you are hit by an enemy three times the 
 
 1. Use arrow keys (up, down, left and right) to control your hero
 2. Avoid all enemy bugs while on the road
-3. Reaching the water gives you 20 points
-4. Getting hit by an enemy bug reduces your score by 10 points and removes one life
+3. Reaching the water gives you 20 points and resets your hero back to the starting position
+4. Getting hit by an enemy bug reduces your score by 10 points, removes one life and resets your hero back to the starting position
 5. The game is over once you have no more lives left
 
