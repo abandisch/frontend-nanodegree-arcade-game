@@ -181,7 +181,7 @@ Player.prototype.handleInput = function(input) {
             break;
         case "help":
         default:
-            alert("Frogger Help - Allowable input:\n\nUp: Move player up\nDown: Move player down\nLeft: Move player left\nRight: Mover player right")
+            alert("Frogger Help - Allowable input:\n\nUp: Move player up\nDown: Move player down\nLeft: Move player left\nRight: Mover player right");
     }
 };
 
